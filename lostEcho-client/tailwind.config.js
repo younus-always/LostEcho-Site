@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        guid: "url('./src/assets/guidlines.svg')"
+        guid: "url('/src/assets/guidlines.svg')"
       }
     }
   },

@@ -64,7 +64,7 @@ const LostNFound = () => {
                                           ref={inputRef}
                                           value={searchTerm}
                                           onChange={(e) => setSearchTerm(e.target.value)}
-                                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Search by title or location" required />
+                                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5" placeholder="Search by title or location" />
                               </div>
                               <button onClick={() => inputRef.current.focus()} className="p-3 ms-2 text-sm font-medium text-white hover:bg-blue-600 bg-blue-700 rounded-lg">
                                     <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
