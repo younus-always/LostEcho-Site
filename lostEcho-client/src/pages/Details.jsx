@@ -31,7 +31,7 @@ const Details = () => {
 
       // load all posted Items
       useEffect(() => {
-            axios.get('https://lost-echo-server.vercel.app/allItems')
+            axios.get(`${import.meta.env.VITE_URL}/allItems`)
                   .then(res => {
                         const result = res.data.find(d => d._id === id);
                         setDetailData(result);
@@ -69,12 +69,12 @@ const Details = () => {
             const itemInfo = { recoveredBy, title, thumbnail, type, category, message, recoveredDate, recoveredLocation, status };
 
 
-            axios.patch(`https://lost-echo-server.vercel.app/allItems/${_id}`, { status: status })
+            axios.patch(`${import.meta.env.VITE_URL}/allItems/${_id}`, { status: status })
                   .then(res => {
                   }).catch(error => console.log(error))
 
             // Recovered data post to server & store recovered collection
-            axios.post("https://lost-echo-server.vercel.app/allRecovered", itemInfo)
+            axios.post(`${import.meta.env.VITE_URL}/allRecovered`, itemInfo)
                   .then(res => {
                         const result = res.data;
                         if (result.insertedId) {

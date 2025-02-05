@@ -21,12 +21,12 @@ const router = createBrowserRouter([
                   {
                         path: '/',
                         element: <Home />,
-                        loader: () => fetch("https://lost-echo-server.vercel.app/latestItems")
+                        loader: () => fetch(`${import.meta.env.VITE_URL}/latestItems`)
                   },
                   {
                         path: '/lost&found',
                         element: <LostNFound />,
-                        loader: () => fetch(`https://lost-echo-server.vercel.app/allItems`)
+                        loader: () => fetch(`${import.meta.env.VITE_URL}/allItems`)
                   },
                   {
                         path: '/addLost&Found',
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
                   {
                         path: '/allRecoveredItems',
                         element: <Private><AllRecovered /></Private>,
-                        loader: () => fetch(`https://lost-echo-server.vercel.app/allRecovered`, {
+                        loader: () => fetch(`${import.meta.env.VITE_URL}/allRecovered`, {
                               method: "GET",
                               credentials: "include"
                         })
@@ -43,17 +43,17 @@ const router = createBrowserRouter([
                   {
                         path: '/manageMyItems',
                         element: <Private><MyItems /></Private>,
-                        loader: () => fetch("https://lost-echo-server.vercel.app/allItems")
+                        loader: () => fetch(`${import.meta.env.VITE_URL}/allItems`)
                   },
                   {
                         path: '/updateItem/:id',
                         element: <Private><UpdateItem /></Private>,
-                        loader: ({ params }) => fetch(`https://lost-echo-server.vercel.app/allItems/${params.id}`)
+                        loader: ({ params }) => fetch(`${import.meta.env.VITE_URL}/allItems/${params.id}`)
                   },
                   {
                         path: '/items/:id',
                         element: <Private><Details /></Private>,
-                        loader: ({ params }) => fetch(`https://lost-echo-server.vercel.app/allItems/${params.id}`)
+                        loader: ({ params }) => fetch(`${import.meta.env.VITE_URL}/allItems/${params.id}`)
                   },
                   {
                         path: '/signin',

@@ -40,7 +40,7 @@ const AddLostNFound = () => {
             }
 
             // Post all user items to server
-            axios.post(`https://lost-echo-server.vercel.app/addItems`, itemInfo)
+            axios.post(`${import.meta.env.VITE_URL}/addItems`, itemInfo)
                   .then(res => {
                         const result = res.data;
                         if (result.insertedId) {

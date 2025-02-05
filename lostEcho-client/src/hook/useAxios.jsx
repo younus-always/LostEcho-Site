@@ -4,7 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const axiosInstance = axios.create({
-      baseURL: "https://lost-echo-server.vercel.app",
+      baseURL: `${import.meta.env.VITE_URL}`,
       withCredentials: true
 })
 const useAxios = () => {

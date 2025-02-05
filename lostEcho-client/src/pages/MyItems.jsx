@@ -42,7 +42,7 @@ const MyItems = () => {
                   confirmButtonText: "Yes, delete it!"
             }).then((result) => {
                   if (result.isConfirmed) {
-                        fetch(`https://lost-echo-server.vercel.app/item/${id}`, {
+                        fetch(`${import.meta.env.VITE_URL}/item/${id}`, {
                               method: 'DELETE',
                         }).then(res => res.json())
                               .then(data => {

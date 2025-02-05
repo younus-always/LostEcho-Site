@@ -28,7 +28,7 @@ const UpdateItem = () => {
 
       // Load data to find update data
       useEffect(() => {
-            axios.get(`https://lost-echo-server.vercel.app/allItems`)
+            axios.get(`${import.meta.env.VITE_URL}/allItems`)
                   .then(res => {
                         const findData = res.data.find(data => data._id === id);
                         setUpdateData(findData);
@@ -56,7 +56,7 @@ const UpdateItem = () => {
             }
 
             // Update on put method
-            fetch(`https://lost-echo-server.vercel.app/allItems/${id}`, {
+            fetch(`${import.meta.env.VITE_URL}/allItems/${id}`, {
                   method: 'PUT',
                   headers: {
                         'content-type': 'application/json'

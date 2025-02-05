@@ -53,13 +53,13 @@ const AuthProvider = ({ children }) => {
                   setUser(currentUser);
                   if (currentUser?.email) {
                         const user = { email: currentUser.email };
-                        axios.post('https://lost-echo-server.vercel.app/jwt', user, { withCredentials: true })
+                        axios.post(`${import.meta.env.VITE_URL}/jwt`, user, { withCredentials: true })
                               .then(res => {
                                     setLoading(false);
                               })
                   }
                   else {
-                        axios.post("https://lost-echo-server.vercel.app/logout", {}, { withCredentials: true })
+                        axios.post(`${import.meta.env.VITE_URL}/logout`, {}, { withCredentials: true })
                               .then(res => {
                                     setLoading(false);
                               })

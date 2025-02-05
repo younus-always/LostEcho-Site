@@ -28,7 +28,7 @@ const LostNFound = () => {
 
       // Search data loaded and store
       useEffect(() => {
-            axios.get(`https://lost-echo-server.vercel.app/items?search=${searchTerm}`)
+            axios.get(`${import.meta.env.VITE_URL}/items?search=${searchTerm}`)
                   .then(res => {
                         setItems(res.data)
                   }).catch(error => console.log(error))

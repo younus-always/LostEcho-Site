@@ -19,7 +19,7 @@ const Card = ({ item }) => {
                                     src={
                                           item.thumbnail.startsWith('http')
                                                 ? item.thumbnail
-                                                : `https://lost-echo-server.vercel.app/uploads/${item.thumbnail}`
+                                                : `${import.meta.env.VITE_URL}/uploads/${item.thumbnail}`
                                     } alt={item.title} />
                         </figure>
                         <div className="p-5 pb-0">
