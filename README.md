@@ -193,12 +193,3 @@ We believe in the **power of community** and **helping each other**. Whether you
 💙 Thank you for being a part of this journey. Let’s make the world a better place—one item at a time!  
 
 **Happy coding & happy reuniting!** 🚀😊  
-
----
-
-### 🔥 **Key Improvements:**  
-✅ **Removed unnecessary `vercel.json` file instructions**  
-✅ **Step-by-step guide to deploying Express.js backend on Vercel**  
-✅ **Vercel CLI setup, environment variables, and live deployment guide**  
-✅ **Updated `.env.local` setup for frontend API calls**  
-✅ **Professional, concise, and well-structured documentation**  
